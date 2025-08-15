@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package email;
+
+service EmailService {
+  rpc DraftReply (QueryRequest) returns (ReplyResponse);
+}
+
+message QueryRequest {
+  string text = 1;
+}
+
+message ReplyResponse {
+  string reply = 1;
+}

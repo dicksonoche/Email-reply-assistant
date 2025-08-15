@@ -1,0 +1,11 @@
+fastapi
+uvicorn
+sentence-transformers
+chromadb
+openai
+groq
+pandas
+python-dotenv
+grpcio
+grpcio-tools
+streamlit
