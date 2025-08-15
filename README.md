@@ -2,7 +2,7 @@
 
 A sophisticated AI-powered application that generates professional customer support replies based on similar past interactions. Built with FastAPI, ChromaDB, and Groq AI, this system provides intelligent, context-aware responses for customer service teams.
 
-## 🏗️ Architecture Overview
+## Architecture Overview
 
 The application follows a microservices architecture with multiple interfaces:
 
@@ -12,7 +12,7 @@ The application follows a microservices architecture with multiple interfaces:
 - **ChromaDB** - Vector database for semantic similarity search
 - **Groq AI** - LLM provider using the `openai/gpt-oss-20b` model
 
-## 🚀 Features
+## Features
 
 - **Semantic Search**: Find similar past customer interactions using vector embeddings
 - **AI-Powered Generation**: Generate contextually relevant replies using Groq's LLM
@@ -21,7 +21,7 @@ The application follows a microservices architecture with multiple interfaces:
 - **Fallback Handling**: Graceful degradation when AI services are unavailable
 - **Scalable Design**: Built with modern Python frameworks for production use
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 email-reply/
@@ -55,7 +55,7 @@ email-reply/
 └── README.md                    # This file
 ```
 
-## 🛠️ Technology Stack
+## Technology Stack
 
 ### Backend
 - **FastAPI** - Modern, fast web framework for building APIs
@@ -76,18 +76,18 @@ email-reply/
 - **Uvicorn** - ASGI server for FastAPI
 - **Pandas** - Data manipulation and analysis
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Python 3.8 or higher
 - Groq API key
 - Sufficient disk space for ChromaDB (recommended: 1GB+)
 - Internet connection for AI model inference
 
-## 🚀 Installation & Setup
+## Installation & Setup
 
 ### 1. Clone the Repository
 ```bash
-git clone <repository-url>
+git clone https://github.com/dicksonoche/Email-reply-assistant.git
 cd email-reply
 ```
 
@@ -119,7 +119,7 @@ export GROQ_API_KEY="your_groq_api_key_here"
 3. Generate a new API key
 4. Add it to your environment variables
 
-## 🎯 Usage
+## Usage
 
 ### Starting the REST API Server
 ```bash
@@ -147,7 +147,7 @@ streamlit run app.py
 
 The web interface will be available at http://localhost:8501.
 
-## 📚 API Reference
+## API Reference
 
 ### REST API Endpoints
 
@@ -214,7 +214,7 @@ message ReplyResponse {
 }
 ```
 
-## 🔧 Configuration
+## Configuration
 
 ### ChromaDB Settings
 - **Database Path**: `./chroma_db/`
@@ -233,7 +233,7 @@ message ReplyResponse {
 - **gRPC Port**: 50051
 - **Streamlit Port**: 8501
 
-## 🧪 Testing
+## Testing(Unit tests)
 
 ### Quick Test Runner (Recommended)
 ```bash
@@ -304,7 +304,7 @@ curl -X POST "http://localhost:8000/draft_reply" \
      -d '{"text": "My iPhone screen is cracked"}'
 ```
 
-## 📊 Data Management
+## Data Management
 
 ### ChromaDB Collection Structure
 The `support_queries` collection stores:
@@ -318,7 +318,7 @@ Use the `scripts/prepare_data.py` script to:
 - Generate embeddings
 - Populate the ChromaDB collection
 
-## 🚀 Deployment
+## Deployment
 
 ### Production Considerations
 
